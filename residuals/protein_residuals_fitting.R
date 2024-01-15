@@ -71,7 +71,7 @@ for(experiment_name in names(configs)){
     data = read.table(datapath, header = TRUE, sep = '\t')
     protdata = data[,n_start_prot:n_end_prot]
     protnames = colnames(protdata)
-    covariates = data[, -which(names(data) %in% names(protnames))]
+    covariates = data[, -which(names(data) %in% protnames)]
   }
   
   ## inverse transform the protein data
